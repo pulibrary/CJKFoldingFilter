@@ -27,4 +27,12 @@ public class CJKFoldingFilterFactory extends TokenFilterFactory
 	{
 		return new CJKFoldingFilter(input);
 	}
+
+  /**
+   * Adds wildcard searching capability.
+   */
+  @Override
+  public TokenStream normalize(TokenStream input) {
+    return create(input);
+   }
 }
