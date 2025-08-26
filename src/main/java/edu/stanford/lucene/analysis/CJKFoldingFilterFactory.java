@@ -27,4 +27,9 @@ public class CJKFoldingFilterFactory extends TokenFilterFactory
 	{
 		return new CJKFoldingFilter(input);
 	}
+
+	@Override
+	public TokenStream normalize(TokenStream input) {
+		return new CJKFoldingFilter(input);
+	}
 }
